@@ -5,24 +5,24 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Header from './components/Header.js'
-import HomePage from './pages/HomePage.js'
-import AboutPage from './pages/AboutPage.js'
-import ContactPage from './pages/ContactPage.js'
-import Footer from './components/Footer.js'
+// import Header from './layout/Header.js'
+// import Footer from './layout/Footer.js'
+import Shell from './layout/Shell.js'
+import AdminDashboard from './pages/admin/Dashboard.js'
+import AdminSettings from './pages/admin/Settings.js'
 
 const App = () => {
 
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <Shell />
       <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/admin_dashboard" element={<AdminDashboard />} />
+        <Route path="/admin_settings" element={<AdminSettings />} />
+        <Route path="/admin_settings" element={<AdminSettings />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };
