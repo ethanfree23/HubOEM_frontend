@@ -3,24 +3,35 @@ import { Dialog, Menu, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon,
+  CurrencyDollarIcon,
   ChartPieIcon,
+  Cog8ToothIcon,
   Cog6ToothIcon,
   DocumentDuplicateIcon,
   FolderIcon,
   HomeIcon,
+  BanknotesIcon,
+  UserIcon,
   UsersIcon,
   XMarkIcon,
+  GlobeAmericasIcon,
+  PaperAirplaneIcon,
+  AdjustmentsHorizontalIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 
 const navigation = [
   { name: 'Dashboard', href: 'admin_dashboard', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+  { name: 'Orders', href: 'admin_orders', icon: BanknotesIcon, current: true },
+  { name: 'Parts', href: 'admin_parts', icon: Cog8ToothIcon, current: false },
+  { name: 'Machine Models', href: 'admin_machine_models', icon: FolderIcon, current: false },
+  { name: 'Install Base', href: 'admin_install_base', icon: GlobeAmericasIcon, current: false },
+  { name: 'View Documents', href: 'admin_documents', icon: DocumentDuplicateIcon, current: false },
+  { name: 'Quotes', href: 'admin_quotes', icon: CurrencyDollarIcon, current: false },
+  { name: 'Onboardings', href: 'admin_onboardings', icon: PaperAirplaneIcon, current: false },
+  { name: 'Login Statistics', href: 'admin_login_statistics', icon: AdjustmentsHorizontalIcon, current: false },
+  { name: 'Users', href: 'admin_users', icon: UserIcon, current: false },
+  { name: 'Groups', href: 'admin_user_groups', icon: UsersIcon, current: false },
 ]
 const teams = [
   { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
@@ -41,14 +52,6 @@ function Shell() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
