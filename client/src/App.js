@@ -39,7 +39,7 @@ import CpgPartDetails from './pages/cpg/PartDetails.js'
 import CpgMachineModelsList from './pages/cpg/MachineModelsList.js'
 import CpgInstallBaseList from './pages/cpg/InstallBaseList.js'
 import CpgOnboardingsList from './pages/cpg/OnboardingsList.js'
-import CpgDocumentsList from './pages/cpg/DocumentsList.js'
+// import CpgDocumentsList from './pages/cpg/DocumentsList.js'
 import CpgDocumentDetail from './pages/cpg/DocumentDetail.js'
 import CpgLoginStatisticsList from './pages/cpg/LoginStatisticsList.js'
 import CpgUsersList from './pages/cpg/UsersList.js'
@@ -138,7 +138,7 @@ const App = () => {
         <Route path="/cpg_install_base" element={<CpgInstallBaseList />} />
         <Route path="/cpg_onboardings" element={<CpgOnboardingsList />} />
 
-        <Route path="/cpg_documents" element={<CpgDocumentsList />} />
+        {/* <Route path="/cpg_documents" element={<CpgDocumentsList />} /> */}
         <Route path="/cpg_document_{}" element={<CpgDocumentDetail />} />
 
 
