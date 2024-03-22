@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :facts
   resources :locations
   # Making routes point towards /api/v1

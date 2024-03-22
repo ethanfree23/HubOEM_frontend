@@ -12,14 +12,28 @@ User.destroy_all
 Fact.destroy_all
 Location.destroy_all
 
+# db/seeds.rb
+
+require 'faker'
+
 20.times do
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password_digest: Faker::Internet.password,
+    phone: Faker::PhoneNumber.phone_number,
+    reset_password_token: Faker::Alphanumeric.alphanumeric(number: 10),
+    reset_password_sent_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now),
+    remember_created_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now),
+    sign_in_count: Faker::Number.between(from: 0, to: 100),
+    current_sign_in_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now),
+    last_sign_in_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now),
+    current_sign_in_ip: Faker::Internet.ip_v4_address,
+    last_sign_in_ip: Faker::Internet.ip_v4_address
   )
 end
+
 
 20.times do
   Location.create(
